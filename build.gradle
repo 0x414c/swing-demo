@@ -7,6 +7,10 @@
  * user guide available at http://gradle.org/docs/2.2.1/userguide/tutorial_java_projects.html
  */
 
+plugins {
+    id 'edu.sc.seis.launch4j' version '2.4.6'
+}
+
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
@@ -27,4 +31,8 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
+}
+
+launch4j {
+    mainClassName = 'SwingDemo'
 }
